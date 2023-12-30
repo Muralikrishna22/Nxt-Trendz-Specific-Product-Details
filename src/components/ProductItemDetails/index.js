@@ -133,9 +133,10 @@ class ProductItemDetails extends Component {
             <hr className="horizontal-line" />
             <div className="number-of-products-container">
               <button
-                testid="minus"
+                data-testid="minus"
                 type="button"
                 className="btn"
+                aria-label="minus"
                 onClick={this.onDecreaseCount}
               >
                 <BsDashSquare />
@@ -143,8 +144,9 @@ class ProductItemDetails extends Component {
               <p className="count">{count}</p>
               <button
                 type="button"
-                testid="plus"
+                data-testid="plus"
                 className="btn"
+                aria-label="plus"
                 onClick={this.onIncreaseCount}
               >
                 <BsPlusSquare />
@@ -180,7 +182,7 @@ class ProductItemDetails extends Component {
 
   renderLoader = () => (
     <div className="product-details-container">
-      <div testid="loader">
+      <div data-testid="loader">
         <Loader type="ThreeDots" color="blue" height={50} width={50} />
       </div>
     </div>
